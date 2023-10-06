@@ -23,6 +23,7 @@
                     />
                     <x-input-error for='name'/>
                 </div>
+
                 <div class="col-span-3">
                     <label
                         htmlFor="pda_code"
@@ -56,6 +57,7 @@
                     />
                     <x-input-error for='rate'/>
                 </div>
+
                 <div class="md:col-span-1 col-span-3">
                     <label
                         htmlFor="state"
@@ -76,6 +78,7 @@
                     </select>
                     <x-input-error for='planification'/>
                 </div>
+
                 <div class="md:col-span-1 col-span-3">
                     <label
                         htmlFor="investments"
@@ -107,8 +110,9 @@
                             Capacity Increase
                         </option>
                     </select>
-                    <x-input-error for='innovation'/>
+                    <x-input-error for='investments'/>
                 </div>
+
                 <div class="md:col-span-1 col-span-3">
                     <label
                         htmlFor="justification"
@@ -125,11 +129,12 @@
                             Normal Capex
                         </option>
                         <option value="special_project">
-                            Justification
+                            Special Project
                         </option>
                     </select>
-                    <x-input-error for='normal_capex'/>
+                    <x-input-error for='justification'/>
                 </div>
+
                 <div class="md:col-span-1 col-span-3">
                     <label
                         htmlFor="start_date"
@@ -145,6 +150,7 @@
                     />
                     <x-input-error for='start_date'/>
                 </div>
+
                 <div class="md:col-span-1 col-span-3">
                     <label
                         htmlFor="finish_date"

@@ -4,8 +4,7 @@
             {{ __('Projects') }}
         </h2>
     </x-slot>
-
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="mx-auto sm:px-6 lg:px-8">
             <livewire:projects-table :is_admin="$user->is_admin" :active="$user->active"/>
         </div>
 </x-app-layout>

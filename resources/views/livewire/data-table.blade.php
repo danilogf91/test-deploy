@@ -1,7 +1,11 @@
 <div>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ $name ?? "Project Name" }}
+            {{-- {{ $name ?? "Project Name" }} --}}
+
+            <a class="pointer text-stone-700 hover:text-stone-600 hover:underline" href="/projects/{{ $id }}">
+                {{ $name }}
+            </a>
         </h2>
     </x-slot>
 
@@ -115,7 +119,7 @@
 
                                 @if ($is_admin_user)
                                     <td>
-                                        <livewire:edit-data :key="$item->id" :data="$item" />
+                                        <livewire:edit-data :key="$item->id.$item->description" :data="$item" />
                                     </td>
                                 @endif
 
