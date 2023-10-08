@@ -55,10 +55,9 @@ class DashboardProjects extends Component
         $this->committed = round(Data::where('project_id', $this->project->id)->sum('committed'), 2);
         $this->global_price = round(Data::where('project_id', $this->project->id)->sum('global_price'), 2);
 
-        $this->budgeted = round(Data::where('project_id', $this->project->id)->sum('global_price'), 2);
+        $this->budgeted = round(Data::where('project_id', $this->project->id)->sum('committed'), 2);
         $this->booked = round(Data::where('project_id', $this->project->id)->sum('real_value'), 2);
-        $this->executed = round(Data::where('project_id', $this->project->id)->sum('committed'), 2);
-
+        $this->executed = round(Data::where('project_id', $this->project->id)->sum('executed_dollars'), 2);
 
         $dataModel = new Data();
         $this->columnNames = $dataModel->getColumnNames();
@@ -151,7 +150,7 @@ class DashboardProjects extends Component
                     $value4 = $data->total4;
 
                     return $multiColumnChartModel
-                        ->addSeriesColumn($type, 'Price', $value2)
+                        ->addSeriesColumn($type, 'Budgeted', $value2)
                         ->addSeriesColumn($type, 'Executed', $value1)
                         ->addSeriesColumn($type, 'Committed', $value3)
                         ->addSeriesColumn($type, 'Real', $value4);

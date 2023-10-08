@@ -169,6 +169,7 @@ class TestChart extends Component
                     ->withGrid()
                     ->withDataLabels()
                     ->withLegend()
+                    ->setType('donut')
             );
 
         $radarChartModel = $area

@@ -1,10 +1,8 @@
 <div>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{-- {{ $name ?? "Project Name" }} --}}
-
-            <a class="pointer text-stone-700 hover:text-stone-600 hover:underline" href="/projects/{{ $id }}">
-                {{ $name }}
+        <h2 class="font-semibold text-xl leading-tight pointer text-stone-700 hover:text-stone-600 hover:underline">
+            <a href="/projects/{{ $id }}">
+                {{ $name ?? "Project Name" }}
             </a>
         </h2>
     </x-slot>
@@ -110,7 +108,7 @@
                         <tbody>
                             @foreach ( $data as $item )
 
-                            <tr wire:key="{{ $item->id }}" class=" text-xs border-b dark:border-gray-700">
+                            <tr wire:key="{{$item->qty.$item->description }}" class=" text-xs border-b dark:border-gray-700">
 
                                 <th scope="row"
                                     class="px-1 py-1 text-gray-900 whitespace-nowrap dark:text-white">
@@ -119,7 +117,7 @@
 
                                 @if ($is_admin_user)
                                     <td>
-                                        <livewire:edit-data :key="$item->id.$item->description" :data="$item" />
+                                        <livewire:edit-data wire:key="{{$item->id }}" :data="$item" />
                                     </td>
                                 @endif
 

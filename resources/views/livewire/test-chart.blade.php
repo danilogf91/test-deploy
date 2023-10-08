@@ -52,31 +52,6 @@
 
     </div>
 
-        {{-- <div class="mt-2 mb-2 gap-2 flex flex-col md:flex-row lg:bg-red-500 md:bg-green-400 sm:bg-yellow-400">
-
-            <div class="shadow rounded p-4 border bg-white lg:flex-1 h-[25rem] sm:h-[30rem]">
-                <livewire:livewire-column-chart
-                    key="{{ $columnChartModel->reactiveKey() }}"
-                    :column-chart-model="$columnChartModel"
-                />
-            </div>
-
-            <div class="shadow rounded p-4 border bg-white lg:flex-1 h-[25rem] sm:h-[30rem]">
-                <livewire:livewire-column-chart
-                    key="{{ $columnChartModel2->reactiveKey() }}"
-                    :column-chart-model="$columnChartModel2"
-                />
-            </div>
-
-            <div class="shadow rounded p-4 border bg-white lg:flex-1 h-[25rem] sm:h-[30rem]">
-
-                <livewire:livewire-radar-chart
-                    key="{{ $radarChartModel->reactiveKey() }}"
-                    :radar-chart-model="$radarChartModel"
-                />
-            </div>
-        </div> --}}
-
         <div class="flex flex-col mt-2 md:flex-row gap-2">
 
             <div class="h-[30rem] shadow rounded p-4 border bg-white flex-1">
@@ -85,6 +60,23 @@
                     :column-chart-model="$columnChartModel"
                 />
            </div>
+
+           <div class="h-[30rem] shadow rounded p-4 border bg-white flex-1">
+                <livewire:livewire-column-chart
+                    key="{{ $columnChartModel->reactiveKey() }}"
+                    :column-chart-model="$columnChartModel"
+                />
+            </div>
+       </div>
+
+        <div class="flex flex-col mt-2 md:flex-row gap-2">
+
+            <div class="h-[30rem] shadow rounded p-4 border bg-white flex-1">
+                <livewire:livewire-pie-chart
+                    key="{{ $pieChartModel->reactiveKey() }}"
+                    :pie-chart-model="$pieChartModel"
+                />
+            </div>
 
            <div class="h-[30rem] shadow rounded p-4 border bg-white flex-1">
                 <livewire:livewire-pie-chart
@@ -104,11 +96,28 @@
            </div>
 
            <div class="h-[30rem] shadow rounded p-4 border bg-white flex-1">
-                <livewire:livewire-radar-chart
-                    key="{{ $radarChartModel->reactiveKey() }}"
-                    :radar-chart-model="$radarChartModel"
-                />
-          </div>
+            <livewire:livewire-column-chart
+                key="{{ $columnChartModel2->reactiveKey() }}"
+                :column-chart-model="$columnChartModel2"
+            />
+        </div>
        </div>
+
+       <div class="flex flex-col mt-2 md:flex-row gap-2">
+
+        <div class="h-[30rem] shadow rounded p-4 border bg-white flex-1">
+            <livewire:livewire-radar-chart
+                key="{{ $radarChartModel->reactiveKey() }}"
+                :radar-chart-model="$radarChartModel"
+            />
+      </div>
+
+       <div class="h-[30rem] shadow rounded p-4 border bg-white flex-1">
+            <livewire:livewire-radar-chart
+                key="{{ $radarChartModel->reactiveKey() }}"
+                :radar-chart-model="$radarChartModel"
+            />
+      </div>
+   </div>
 
 </div>

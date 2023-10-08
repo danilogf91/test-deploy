@@ -8,6 +8,7 @@
 
         <x-slot name="content">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
                 <div class="col-span-3">
                     <label
                         htmlFor="name"
@@ -76,7 +77,7 @@
                         <option value="execution">Execution</option>
                         <option value="finished">Finished</option>
                     </select>
-                    <x-input-error for='planification'/>
+                    <x-input-error for='state'/>
                 </div>
 
                 <div class="md:col-span-1 col-span-3">
@@ -166,6 +167,7 @@
                     />
                     <x-input-error for='finish_date'/>
                 </div>
+
             </div>
         </x-slot>
 

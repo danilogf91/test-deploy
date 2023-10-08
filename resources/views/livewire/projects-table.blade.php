@@ -1,7 +1,7 @@
 <div>
 @if ($active)
     <section class="mt-4">
-        <div class="">
+        <div>
             <!-- Start coding here -->
             <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
                 <div class="flex items-center justify-between d px-4 py-1">
